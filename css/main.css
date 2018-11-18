@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=La+Belle+Aurore|Open+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic&subset=korean');
+/*
+ *  font-family: 'Lato', sans-serif;
+ *  font-family: 'Nanum Gothic', sans-serif;
+*/
 
 :root{
  --brightYellow:#E3B505;
@@ -8,6 +11,7 @@
  --brown:#382923;
  --black:#191919;
  --grey:#A9B2AC;
+ --font-main: 'Nanum Gothis', 'Lato', sans-serif;
 }
 
 *{
@@ -17,14 +21,14 @@
 }
 
 body {
- font-family: 'Open Sans', sans-serif;
+ font-family: var(--font-main);
  background: linear-gradient(rgba(255,255,255,.85), rgba(255,255,255,.85)), url('../img/bodyBcg.jpeg');
  color: var(--black);
 }
 
 /* global styles */
 .bell-fonts {
- font-family: 'La Belle Aurore', cursive;
+ font-family: var(--font-main) ;
 }
 
 /* section padding */
@@ -68,7 +72,7 @@ body {
 
 .section-title__underline {
  background: var(--yellow);
- width: 5rem;
+ width: 5.5rem;
  height: 0.25rem;
 }
 
@@ -178,6 +182,7 @@ body {
  color: var(--yellow);
  cursor: pointer;
  animation: pulse 5s infinite;
+ z-index: 3;
 }
 
 /* nav animation */
@@ -440,6 +445,28 @@ body {
  cursor: pointer;
 }
 
+.goto {
+ width: 100%;
+ height: 2rem;
+ position: absolute;
+ bottom: 0.2rem;
+ left: 0;
+ color: #b2b2b2;
+}
+
+.goto a {
+ text-decoration: none;
+ font-size: 1.3rem;
+}
+
+.goto a:hover {
+ color: white;
+}
+
+.goto a {
+ text-align: center;
+}
+
 @media screen and (min-width: 576px) {
  .work-container {
   display: grid;
@@ -448,7 +475,9 @@ body {
  }
 }
 
+
 @media screen and (min-width:992px){
+
  .work-container{
   height: 100vh;
   grid-template-columns: repeat(4,1fr);
